@@ -53,7 +53,6 @@
     justify-content: center;
   }
   &__search {
-    border: none;
     background-color: transparent;
     cursor: pointer;
     background-image: url("../images/icons/search.svg");
@@ -64,7 +63,6 @@
   }
   &__cart {
     position: relative;
-    border: none;
     background-color: transparent;
     cursor: pointer;
     background-image: url("../images/icons/shopping-cart.svg");
@@ -117,7 +115,6 @@
     }
   }
   &__form-button {
-    border: none;
     position: relative;
     background-color: $accent-color;
     color: #fff;
@@ -157,17 +154,15 @@
     line-height: 130%;
     letter-spacing: 0.01em;
   }
-  &__contact-link {
-    font-size: 16px;
-    line-height: 200%;
-    font-style: normal;
-    padding-left: 30px;
-  }
   &__contact-item {
     margin-bottom: 15px;
   }
   &__contact-link {
     position: relative;
+    font-size: 16px;
+    line-height: 200%;
+    font-style: normal;
+    padding-left: 30px;
     &::before {
       content: "";
       position: absolute;
@@ -180,16 +175,15 @@
     }
   }
   &__contact-link--location::before {
-    background-image: url('../images/icons/location.svg')
+    background-image: url('../images/icons/location.svg');
   }
   &__contact-link--phone::before {
-    background-image: url('../images/icons/calling.svg')
+    background-image: url('../images/icons/calling.svg');
   }
   &__contact-link--email::before {
-    background-image: url("../images/icons/message.svg")
+    background-image: url("../images/icons/message.svg");
   }
 }
-
 
 .social__items {
   display: flex;
@@ -216,6 +210,165 @@
   line-height: 100%;
 }
 
+.title {
+  font-size: 36px;
+  line-height: 130%;
+  @extend %rubik-500;
+}
+.popular-categories__title {
+  // left: 50%;
+  // transform: translateX(-50%);
+  margin-bottom: 60px;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+.top-content {
+  &__inner {
+    display: flex;
+    justify-content: space-between
+  }
+  &__content {
+    width: 450px;
+    margin-top: 156px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 66px;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__subtitle {
+    color: $accent-color;
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__link-order {
+    display: inline-block;
+    margin-right: 34px;
+    padding: 12px 32px;
+    background-color: $accent-color;
+    border-radius: 6px;
+    letter-spacing: 0.03em;
+    line-height: 130%;
+    font-size: 18px;
+    color: #fff;
+  }
+  &__link-more {
+    text-decoration: underline;
+  }
+}
+
+.popular-categories {
+  text-align: center;
+  &__filter {
+    display: flex;
+    margin-bottom: 45px;
+  }
+  &__buttons:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__btn {
+    padding: 13px 32px;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px #ECECEC;
+    border-radius: 5px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    }
+  
+  &__icon {
+    fill: $title-color;
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+  }
+  &__btn--active {
+    background-color: $accent-color;
+    color: #FFFFFF;
+    .popular-categories__icon {
+      fill: #FFFFFF;
+    }
+  }
+  .mixitup-control-active {
+    background-color: $accent-color;
+    color: #fff;
+    .popular-categories__icon {
+      fill: #FFFFFF;
+    }
+  }
+  &__items {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+  }
+  &__item {
+    text-align: center;
+    box-shadow: 0px 0px 0px 1px #ECECEC;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    padding: 20px 15px;
+    max-width: 210px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::before {
+      content: '';
+      display: block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 140px;
+      height: 140px;
+      margin-bottom: 10px;
+    }
+  }
+  &__item--burger-with-salate::before {
+    background-image: url('../images/burgers/burger-with-salate.png');
+  }
+  &__item--bifburger::before {
+    background-image: url('../images/burgers/bifburger.png');
+  }
+  &__item--king-chisburger::before {
+    background-image: url('../images/burgers/king-chisburger.png');
+  }
+  &__item--black-burger::before {
+    background-image: url('../images/burgers/black-burger.png');
+  }
+  &__item--chicken-burger::before {
+    background-image: url('../images/burgers/chicken-burger.png');
+  }
+  &__item-title {
+    font-size: 15px;
+    line-height: 18px;
+    @extend %rubik-400;
+    margin-bottom: 28px;
+  }
+  &__item-price {
+    font-size: 15px;
+    line-height: 140%;
+    @extend %rubik-500;
+    margin-bottom: 10px;
+  }
+  &__item-btn {
+    @extend %rubik-300;
+    font-size: 14px;
+    line-height: 130%;
+    color: #fff;
+    padding: 7px 16px;
+    background-color: $accent-color;
+    border-radius: 6px;
+  }
+  &__link-more {
+    text-decoration: underline;
+  }
+}
 
 
 
