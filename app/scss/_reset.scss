@@ -48,6 +48,9 @@ select,
 a {
   font: inherit;
   outline: transparent;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 a {
