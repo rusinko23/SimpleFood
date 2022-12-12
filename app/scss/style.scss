@@ -89,7 +89,7 @@
 }
 
 .footer-top {
-  padding: 120px 0 60px;
+  padding-bottom: 60px;
   border-bottom: 1px solid $icon-color;
   display: flex;
   &__logo {
@@ -215,9 +215,8 @@
   font-size: 36px;
   line-height: 130%;
   @extend %rubik-500;
-}
-.popular-categories__title {
-  margin-bottom: 60px;
+  color: $title-color;
+  margin-bottom: 45px;
 }
 
 .section {
@@ -264,7 +263,10 @@
 }
 
 .popular-categories {
-  text-align: center;
+  &__title {
+    margin-bottom: 60px;
+    text-align: center;
+  }
   &__filter {
     display: flex;
     margin-bottom: 45px;
@@ -430,15 +432,12 @@
 .best-restaurants {
   padding-bottom: 120px;
   &__title {
-    margin-bottom: 45px;
+    text-align: center;
   }
   &__item {
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
     max-width: 370px;
     border-radius: 10px;
-  }
-  &__img {
-
   }
   &__box {
     padding: 15px 20px 20px 20px;
@@ -602,6 +601,29 @@
   }
 }
 
+
+.applications {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__content {
+    max-width: 530px;
+  }
+  &__text {
+    margin-bottom: 30px;
+  }
+  &__apps {
+    display: flex;
+    align-items: center;
+  }
+  &__app {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
 
 
 
